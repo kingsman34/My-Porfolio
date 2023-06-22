@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sidebar{
+    position: absolute;
+    background-color: rgb(238, 238, 238);
+    height: 100vh;
+    font-family: 'Fira Sans', sans-serif;
+    transition: transform 0.3s ease-in;
+}
+.sidebar nav{
+    padding: 45px;
+}
+.sidebar nav li{
+    font-size: 30px;
+    font-weight: bold;
+    list-style: none;
+    padding: 33px 0;
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color:black;
+}
+
+.main{
+    background-color: hsl(0, 0%, 100%);
+    width: 90vw;
+}
+
+.container{
+    display: flex;
+}
+
+.infoContainer{
+    background-color: white;
+    height: 68vh;
+    width: 80vw;
+    margin: 16vh auto;
+    display: flex;
+    justify-content:space-around;
+}
+
+.myPic img{
+    height: 68vh;
+    align-items: flex-end;
+}
+
+.myInfo{
+    font-size: 24px;
+    padding: 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.hello{
+    font-size: 3em;
+}
+.name{
+    font-size: 2.5em;
+    font-weight: bold;
+    font-family: 'Source Code Pro', monospace;
+}
+.about{
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 10;
+}
+
+.buttons{
+    margin-top: 34px;
+    font-size: 16px;
+}
+
+.buttons button{
+    margin-top: 32px;
+    padding: 9px 14px;
+    border-radius: 25px;
+    background-color: dodgerblue;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin: 3px 3px;
+}
+
+.buttons button:hover{
+    background-color: white;
+    color: dodgerblue;
+    transition-duration: 1200ms;
+}
+
+.inner{
+    background-color: #333;
+    padding-top: 20px;
+    font-family:'Fira Sans', sans-serif;
+}
+
+.header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+.header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #2ecc;
+}
+.containersk{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+}
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+    width: 50px;
+    background-color: #2ecc71;
+}
+.skill-box:hover .img{
+    transform: translateY(-10px);
+    transition-duration: 0.5s;
+}
+
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.skill-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0px;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    transition: 0.5s;
+}
+
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0px;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    transition: 0.5s;
+}
+
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgba(100,100, 100, .05);
+    border-radius: 45px 0 0 45px;
+}
+
+.skill-title h3{
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.skill-icon{
+    width: 50px;
+}
+.sidebarGo{
+    transform: translate(-443px,0);
+    position: absolute;
+}
+.ham{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+.cross{
+    margin-left: 170px;
+}
+
+@media screen and (max-width: 990px){
+    .containersk{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2 rem 50px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .containersk{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width : 1650px){
+    .buttons{
+        font-size: 12px;
+    }
+    .myInfo{
+        font-size: 20px;
+    }
+    .myPic{
+        display: none;
+    }
+}
