@@ -226,6 +226,7 @@
         grid-template-columns: repeat(2, 1fr);
         padding: 2 rem 50px;
     }
+    
 }
 
 @media screen and (max-width: 650px){
@@ -234,14 +235,26 @@
     }
 }
 
-@media (max-width : 1650px){
-    .buttons{
+@media (max-width : 1200px){
+    
+    .myInfo{
         font-size: 12px;
+    } 
+    
+}
+
+@media (max-width : 650px){
+    .hamburger{
+        left: 2px;
+    }
+    .buttons{
+        font-size: 8px;
     }
     .myInfo{
-        font-size: 20px;
+        margin-top: 200px;
+        font-size: 10px;
     }
-    .myPic{
-        display: none;
+    .infoContainer{
+        flex-direction:column;
     }
 }
